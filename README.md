@@ -9,18 +9,23 @@
 This implementation is based on the API documentation [https://www.velux.com/api/klf200](https://www.velux.com/api/klf200).
 It works only with the Verion 0.2.0.0.71.
 
-Up to the version 0.1.1.0.45 it was possible to address the KLF-200 via the web interface. This does not work in version 0.2.0.0.71 anymore. Velux shared on demand with the Lan interfache can only be addressed via the API.
+Up to the version 0.1.1.0.45 it was possible to access the KLF-200 via the LAN interface. This does not work in version 0.2.0.0.71 anymore. Velux shared on demand with the Lan interfache can only be addressed via the API.
 
 Take a look at the [technical specification for klf 200 api.pdf](https://github.com/ChrisHanuta/velux-klf200-api/blob/master/technical%20specification%20for%20klf%20200%20api.pdf)
 
 
 For the latest updates see the [CHANGELOG.md](https://github.com/ChrisHanuta/velux-klf200-api/blob/master/CHANGELOG.md)
 
+
+```
 npm install velux-klf200-api
 ```
 
 
 # Currently tested with API 3.15 from 01.10.2018 version 0.2.0.0.71
+
+
+# The connect password is the WLAN-Password not the web config password
 
 
 ## Requirements
