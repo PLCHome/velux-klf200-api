@@ -1,0 +1,30 @@
+{
+  "name": "velux-klf200-api",
+  "version": "0.0.1",
+  "description": "Provide node to Velux&copy; KLF-200 io-homecontrol&copy; Gateway API",
+  "main": "lib/klf.js",
+  "license": "MIT",
+  "dependencies": {
+    "safe-buffer": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisHanuta/velux-klf200-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisHanuta/velux-klf200-api/issues"
+  },
+  "homepage": "https://github.com/ChrisHanuta/velux-klf200-api#readme",
+  "keywords": [
+    "velux",
+    "klf",
+    "klf200",
+    "klf-200",
+    "io-homecontrol",
+    "gateway",
+    "api"
+  ],
+  "author": {
+    "name": "Chris Traeger"
+  }
+}
