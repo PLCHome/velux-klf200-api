@@ -5,6 +5,7 @@
   "main": "lib/klf.js",
   "license": "MIT",
   "dependencies": {
+    "promise": "^8.0.2",
     "safe-buffer": "^5.1.2"
   },
   "repository": {
