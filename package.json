@@ -1,6 +1,6 @@
 {
   "name": "velux-klf200-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Provide node to Velux&copy; KLF-200 io-homecontrol&copy; Gateway API",
   "main": "lib/net.js",
   "license": "MIT",
