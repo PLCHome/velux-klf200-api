@@ -258,6 +258,91 @@ When a notification arrives, the emitter is called once with 'NTF' and once with
 - **GW_PASSWORD_CHANGE_NTF** *Acknowledge to GW_PASSWORD_CHANGE_REQ. Broadcasted to all connected clients.*
 see examples below
 ---
+# examples
+
+### Lists all nodes
+``` javascript
+'use strict'
+const velux = require('velux-klf200-api')
+
+velux.on('NTF',(data)=>{
+  console.log(data)
+})
+
+velux.connect('192.168.2.15',{})
+.then(()=>{
+  return velux.login('<some password>')
+})
+.then((data)=>{
+  return velux.sendCommand({ api: Net.API.GW_GET_ALL_NODES_INFORMATION_REQ })
+})
+.then((data)=>{
+  console.log(data)
+})
+.catch((err)=>{
+  console.log(err)
+  return velux.end()
+})
+```
+
+### Let a shutter with node ID 0 wink
+``` javascript
+'use strict'
+const velux = require('velux-klf200-api')
+
+velux.connect('192.168.2.15',{})
+.then(()=>{
+  return velux.login('<some password>')
+})
+.then((data)=>{
+  return velux.sendCommand({ api: Net.API.GW_WINK_SEND_REQ,
+      commandOriginator: 1,
+      priorityLevel: 2,
+      winkStat: true,
+      winkTime: 10,
+      indexArrayCount: 1,
+      indexArray: [0]
+  })
+})
+.then((data)=>{
+  console.log(data)
+})
+.catch((err)=>{
+  console.log(err)
+  return velux.end()
+})
+```
+
+### Moves a shutter with node ID 0 to 100%
+``` javascript
+'use strict'
+const velux = require('velux-klf200-api')
+
+velux.connect('192.168.2.15',{})
+.then(()=>{
+  return velux.login('<some password>')
+})
+.then((data)=>{
+  return velux.sendCommand({ api: Net.API.GW_COMMAND_SEND_REQ,
+      commandOriginator: 1,
+      priorityLevel: 2,
+      parameterActive: 0,
+      functionalParameterMPValue: 100,
+      indexArrayCount: 1,
+      indexArray: [0],
+      priorityLevelLock: false,
+      lockTime: 0
+  })
+})
+.then((data)=>{
+  console.log(data)
+})
+.catch((err)=>{
+  console.log(err)
+  return velux.end()
+})
+```
+
 
 License (MIT)
 -------------
