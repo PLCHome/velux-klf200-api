@@ -39,7 +39,7 @@ set DEBUG=velux-klf200-api:*
 This API works with and without promise. You can use a callback function. If there is no callback function in the call the API create an promise object.
 
 ## API without Promise
-every API callback function is called first with an error object and then eventually a data object. If there is no error, the first parameter is zero.
+every API callback function is called first with an error object and then eventually a data object. If there is no error, the first parameter is null.
 
 ``` javascript
 function callback(error,data) {}
@@ -129,15 +129,15 @@ function (data){}
 step3: { id: 0,
   api: 9,
   apiText: 'GW_GET_VERSION_CFM',
-  SoftwareVersion: [ 0, 2, 0, 0, 71, 0 ],
-  HardwareVersion: 6,
-  ProductGroup: 14,
-  ProductType: 3 }
+  softwareVersion: [ 0, 2, 0, 0, 71, 0 ],
+  hardwareVersion: 6,
+  productGroup: 14,
+  productType: 3 }
 step4: { id: 0,
   api: 11,
   apiText: 'GW_GET_PROTOCOL_VERSION_CFM',
-  MajorVersion: 3,
-  MinorVersion: 14 }
+  majorVersion: 3,
+  minorVersion: 14 }
 ```
 ---
 # API functions
