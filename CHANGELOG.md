@@ -1,4 +1,4 @@
-### 0.0.2: Maintenance Release
+### 0.1.1: Maintenance Release
 
 **Enhancements**
 
@@ -10,4 +10,4 @@
 - 
 
 
-### 0.0.1: Initial Release
+### 0.1.0: Initial Release
