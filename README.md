@@ -178,7 +178,7 @@ The request and the answer are always objects. Only API commands that end with '
 
 The construction of the request object
 ``` javascript
-{ api: Net.API.<command>_REQ,
+{ api: velux.API.<command>_REQ,
   <dataName>: <value>}
 ```
 or
@@ -272,7 +272,7 @@ velux.connect('192.168.2.15',{})
   return velux.login('<some password>')
 })
 .then((data)=>{
-  return velux.sendCommand({ api: Net.API.GW_GET_ALL_NODES_INFORMATION_REQ })
+  return velux.sendCommand({ api: velux.API.GW_GET_ALL_NODES_INFORMATION_REQ })
 })
 .then((data)=>{
   console.log(data)
@@ -293,7 +293,7 @@ velux.connect('192.168.2.15',{})
   return velux.login('<some password>')
 })
 .then((data)=>{
-  return velux.sendCommand({ api: Net.API.GW_WINK_SEND_REQ,
+  return velux.sendCommand({ api: velux.API.GW_WINK_SEND_REQ,
       commandOriginator: 1,
       priorityLevel: 2,
       winkStat: true,
@@ -321,7 +321,7 @@ velux.connect('192.168.2.15',{})
   return velux.login('<some password>')
 })
 .then((data)=>{
-  return velux.sendCommand({ api: Net.API.GW_COMMAND_SEND_REQ,
+  return velux.sendCommand({ api: velux.API.GW_COMMAND_SEND_REQ,
       commandOriginator: 1,
       priorityLevel: 2,
       parameterActive: 0,
