@@ -40,6 +40,7 @@ I saw these in the wireshark.
 Should anyone else notice this error, it would be nice if that this someone also reports to the VELUX hotline.
 
 
+---
 ### The connect password is the WLAN-Password not the web config password
 ---
 
