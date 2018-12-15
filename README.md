@@ -23,6 +23,16 @@ npm install velux-klf200-api
 ### Currently tested with API 3.14 from 01.10.2018 version 0.2.0.0.71
 ---
 
+## Current problems
+
+If there is no communication with the KLF every 10 minutes to 15 minutes, the connection will be disconnected as described in the manual.
+If this happens when the home monitor "GW_HOUSE_STATUS_MONITOR_ENABLE_REQ" is activated, the KLF200 is no longer reachable. 
+The KLF200 no longer sends the TLS command "Change Cipher Spec." on TLS start.
+This means that TLS encryption can no longer be initiated.
+I saw these in the wireshark.
+Should anyone else notice this error, it would be nice if that this someone also reports to the VELUX hotline.
+---
+
 ### The connect password is the WLAN-Password not the web config password
 ---
 
