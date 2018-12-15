@@ -24,6 +24,12 @@ npm install velux-klf200-api
 ---
 
 ## Current problems
+GW_NODE_STATE_POSITION_CHANGED_NTF contains an incorrect timestamp. The lowest 2 bytes of the 4 bytes are sent to the higher 2 bytes and the lowest 2 bytes are 0.
+In response to the "GW_GET_ALL_NODES_INFORMATION_REQ" command, the correct time stamp is sent:
+5be8d806 - 2018-11-12T01: 31: 50.000Z
+15 sec Later a "GW_NODE_STATE_POSITION_CHANGED_NTF" hits. This contains a timestamp:
+d8160000 
+correct was here 5be8d816
 
 If there is no communication with the KLF every 10 minutes to 15 minutes, the connection will be disconnected as described in the manual.
 If this happens when the home monitor "GW_HOUSE_STATUS_MONITOR_ENABLE_REQ" is activated, the KLF200 is no longer reachable. 
