@@ -24,6 +24,7 @@ npm install velux-klf200-api
 ---
 
 ## Current problems
+
 GW_NODE_STATE_POSITION_CHANGED_NTF contains an incorrect timestamp. The lowest 2 bytes of the 4 bytes are sent to the higher 2 bytes and the lowest 2 bytes are 0.
 In response to the "GW_GET_ALL_NODES_INFORMATION_REQ" command, the correct time stamp is sent:
 5be8d806 - 2018-11-12T01: 31: 50.000Z
@@ -37,7 +38,7 @@ The KLF200 no longer sends the TLS command "Change Cipher Spec." on TLS start.
 This means that TLS encryption can no longer be initiated.
 I saw these in the wireshark.
 Should anyone else notice this error, it would be nice if that this someone also reports to the VELUX hotline.
----
+
 
 ### The connect password is the WLAN-Password not the web config password
 ---
