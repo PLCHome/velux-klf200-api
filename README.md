@@ -343,8 +343,8 @@ velux.connect('192.168.2.15',{})
       commandOriginator: 1,
       priorityLevel: 2,
       parameterActive: 0,
-      functionalParameterMPValue: {valueType:'RELATIVE', value:100),
-      /* functionalParameterMPValue: 100, */
+      functionalParameterMP: {valueType:'RELATIVE', value:100),
+      /* functionalParameterMP: 100, */
       indexArrayCount: 1,
       indexArray: [0],
       priorityLevelLock: false,
