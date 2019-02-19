@@ -371,7 +371,7 @@ It's also possible to use an number instead an Object. Then the API use **Relati
 ```
 Access Method name for |Description                                   |Range (Hex)   |Size (Dec)
 Standard Parameter     |                                              |              |
-valueType              |value                                         |KLF200        |KLF200
+valueType              |value                                         |rawValue      |
 
 RELATIVE               |Relative value (0 – 100%)                     |0x0000–0xC800 |51201
 RELATIVE               |No feed-back value known                      |0xF7FF        |1
