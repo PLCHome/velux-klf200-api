@@ -369,15 +369,15 @@ It's also possible to use an number instead an Object. Then the API use **Relati
 
 ```
 Access Method name for |Description                                   |Range (Hex)   |Size (Dec)
-Standard Parameter     |                                              |              |
+valueType              |value                                         |KLF200        |KLF200
 
-Relative               |Relative value (0 – 100%)                     |0x0000–0xC800 |51201
-Relative               |No feed-back value known                      |0xF7FF        |1
-Percent+-              |Percentage point plus or minus (-100% – 100%) |0xC900-0xD0D0 |2001
-Target                 |The target value for the parameter            |0xD100        |1
-Current                |The current value for the parameter           |0xD200        |1
-Default                |The default value for the parameter           |0xD300        |1
-Ignore                 |Ignore the parameter field where this         |0xD400        |1
+RELATIVE               |Relative value (0 – 100%)                     |0x0000–0xC800 |51201
+RELATIVE               |No feed-back value known                      |0xF7FF        |1
+PERCENT_PM             |Percentage point plus or minus (-100% – 100%) |0xC900-0xD0D0 |2001
+TARGET                 |The target value for the parameter            |0xD100        |1
+CURRENT                |The current value for the parameter           |0xD200        |1
+DEFAULT                |The default value for the parameter           |0xD300        |1
+IGNORE                 |Ignore the parameter field where this         |0xD400        |1
                        |Access Method is written                      |              |
 ```
 

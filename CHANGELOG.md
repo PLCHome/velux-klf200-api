@@ -8,6 +8,7 @@
 **Fixes**
 
 - ReadMe Issue: functionalParameterMPValue #4
+- readme.md / getPosition valueType comment
 
 ### 0.1.2: Maintenance Release
 
