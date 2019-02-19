@@ -9,6 +9,7 @@
 
 - ReadMe Issue: functionalParameterMPValue #4
 - readme.md / getPosition valueType comment
+- readme.md Issue: Node TLS handshake performance #5
 
 ### 0.1.2: Maintenance Release
 

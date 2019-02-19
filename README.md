@@ -39,6 +39,7 @@ This means that TLS encryption can no longer be initiated.
 I saw these in the wireshark.
 Should anyone else notice this error, it would be nice if that this someone also reports to the VELUX hotline.
 
+The KLF200 needs more than 3 seconds to connect. It needs more then a second to send the key and more then a second for the TLS command "Change Cipher Spec.".
 
 ---
 ### The connect password is the WLAN-Password not the web config password
