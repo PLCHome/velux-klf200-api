@@ -2,7 +2,7 @@
 
 **Enhancements**
 
-- 
+- added export typs
 
 
 **Fixes**
@@ -10,6 +10,7 @@
 - ReadMe Issue: functionalParameterMPValue #4
 - readme.md / getPosition valueType comment
 - readme.md Issue: Node TLS handshake performance #5
+- klf.js: corrected GW_GET_SCENE_LIST_NTF
 
 ### 0.1.2: Maintenance Release
 
