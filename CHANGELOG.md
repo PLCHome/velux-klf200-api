@@ -1,4 +1,15 @@
-### 0.1.3: Maintenance Release
+### 0.1.4: Maintenance ReleaseactuatorAddress
+
+**Fixes**
+
+- Fixes some issues from LGTM.com
+- GW_CS_GET_SYSTEMTABLE_DATA_NTF: actuatorAddressactuatorAddress.MiddleByte missing
+- GW_CS_PGC_JOB_NTF: data not filled
+- GW_PASSWORD_CHANGE_CFM: missing
+
+
+
+### 0.1.3: Maintenance ReleaseactuatorAddress
 
 **Enhancements**
 
