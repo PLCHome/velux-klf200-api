@@ -1,3 +1,9 @@
+### 0.1.5: Maintenance Release
+
+**Fixes**
+
+- modify Tls.connect options
+
 ### 0.1.4: Maintenance Release
 
 **Fixes**
