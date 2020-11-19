@@ -1,3 +1,12 @@
+### 0.1.6: Maintenance Release
+**Enhancements**
+
+- Adapted to API 3.18
+
+**Fixes**
+
+- add cert to Tls.connect options
+
 ### 0.1.5: Maintenance Release
 
 **Fixes**

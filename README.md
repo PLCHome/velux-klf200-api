@@ -20,7 +20,7 @@ npm install velux-klf200-api
 ```
 ---
 
-### Currently tested with API 3.14 from 01.10.2018 version 0.2.0.0.71
+### Currently tested with API 3.18 from 12.10.2019 version 0.2.0.0.71
 ---
 
 ## Current problems
@@ -53,6 +53,36 @@ This API supported debugging. you have to set the environment variable DEBUG
 ```
 set DEBUG=velux-klf200-api:*
 ```
+---
+# Generate Certificate
+The KLF-200 uses a self-signed certificate to secure the TLS protocol. This package contains the fingerprint and certificate that I have extracted from my KLF-200.
+
+In case that your connection doesn't work due to a different certificate you have to extract the certificate from your box with the following command:
+
+```
+$ echo -n | openssl s_client -connect <ip adress of your KLF-200>:51200 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > velux-cert.pem
+```
+
+After extracting the certificate you have to generate the fingerprint with the following command:
+
+```
+$ openssl x509 -noout -fingerprint -sha1 -inform pem -in velux-cert.pem
+```
+This will print a fingerprint like `02:8C:23:A0:89:2B:62:98:C4:99:00:5B:D2:E7:2E:0A:70:3D:71:6A`.
+
+The fingerprint is not checked by default. But you can check it if you set the fingerprint variable.
+You can exchange the certificate via the CA variable.
+
+``` javascript
+'use strict'
+const velux = require('velux-klf200-api')
+const fs = require('fs')
+velux.fingerprint = '02:8C:23:A0:89:2B:62:98:C4:99:00:5B:D2:E7:2E:0A:70:3D:71:6A'
+veluc.CA = fs.readFileSync('velux-cert.pem')
+```
+
+If the fingerprint is not set, it can be queried via `velux.fingerprint`.
+
 ---
 ### Promise
 This API works with and without promise. You can use a callback function. If there is no callback function in the call the API create an promise object.
